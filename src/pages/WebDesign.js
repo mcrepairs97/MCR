@@ -7,7 +7,6 @@ import Heading from '../components/Heading';
 import Divider from '../components/Divider';
 import Section from '../components/Section';
 import Grid from '../components/Grid';
-import IconBox from '../components/IconBox';
 
 import webDesign from '../assets/images/web-design.png';
 import webDesignBottom from '../assets/images/web-design-bottom.jpg';
