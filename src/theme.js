@@ -1,13 +1,14 @@
 const theme = {
-    fg: "#fff",
-    header: "#6A8D92",
-    footer: "#313628",
-    accent: "#85DB84",
-    accentGhost: "#ABFAA9",
-    darkBg: "#37737A",
-    lightBg: "#D2F7FC",
-
-    
+    fgLight: "#fff",
+    fgDark: "#333",
+    bgLight: "#fff",
+    bgDark: "#333",
+    footer: "#2A2C25",
+    accent: "#00B609",
+    accentGhost: "#6dde72",
+    accentGray: "#43444d",
+    accentBlack: "#060808",
+    accentPurple: "#42253b",
 };
 
 export default theme;
