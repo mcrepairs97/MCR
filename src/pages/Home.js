@@ -59,7 +59,9 @@ function Home() {
     const { width } = useWindowSize();
     return (
         <React.Fragment>
+            
             <BackgroundImage img={brokenLaptop} pos="top" height="80vh">
+                
                 <Container>
                     <Heading>
                         <H1 content="Martin's Computer Repairs &amp; IT Services" />

@@ -38,17 +38,17 @@ function RepairServices() {
                 <Container>
                     <Grid>
                         <Product icon={faKey} title="Password Removal" price="R150" />
+                        <Product icon={faCut} title="Stripping" price="R150" />
+                        <Product icon={faCopy} title="Cloning" price="R150" />
                         <Product icon={faVirusSlash} title="Virus Removal" price="R200" />
                         <Product icon={faLaptopHouse} title="Remote Assistance" price="R200" />
                         <Product icon={faDatabase} title="Data backup &amp; Restore" price="R200" />
                         <Product icon={faEthernet} title="Router Configuration" price="R200" />
                         <Product icon={faAt} title="Email Configuration" price="R200" />
-                        <Product icon={faCopy} title="Cloning" price="R150" />
+                        <Product icon={faNetworkWired} title="Networking" price="R200" />
+                        <Product icon={faDownload} title="Downloading of Programs" price="R200" />
                         <Product icon={faWindows} title="Windows Repair" price="R250" />
                         <Product icon={faWindowRestore} title="Reinstall Windows" price="R300" />
-                        <Product icon={faNetworkWired} title="Networking" price="R200" />
-                        <Product icon={faCut} title="Stripping" price="R150" />
-                        <Product icon={faDownload} title="Downloading of Programs" price="R200" />
                     </Grid>
                 </Container>
             </Section>

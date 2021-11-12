@@ -24,6 +24,14 @@ height: 40px;
 padding: 20px;
 `;
 
+const Textarea = styled.textarea`
+width: 100%;
+margin-bottom: 10px;
+border: 1px solid #ededed;
+background-color: #ededed;
+padding: 20px;
+`;
+
 const Button = styled.button`
 border: none;
 background: hsla(123, 100%, 36%, 1);
@@ -39,31 +47,82 @@ width: max-content;
 cursor: pointer;
 `;
 
-const handleSubmit = () => {
-
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
 }
 
-export default function Form() {
-    return (
-        <FormBox onSubmit={handleSubmit} name="contact" netlify>
-            <Container>
-                <Heading>
-                    <H2 content="Send Us A Message" />
-                    <Divider />
-                </Heading>
-                <p>
-                    <Input type="text" name="name" placeholder="Your Name" aria-label="Your Name" />
-                </p>
-                <p>
-                    <Input type="email" name="email" placeholder="Email Address" aria-label="Email Address" />
-                </p>
-                <p>
-                    <Input type="text-area" name="message" placeholder="Message" aria-label="Message" />
-                </p>
-                <p>
-                    <Button type="submit" aria-label="Submit">Send Message</Button>
-                </p>
-            </Container>
+export default class Form extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { name: "", email: "", message: "" };
+    }
+
+    /* Here’s the juicy bit for posting the form submission */
+
+    handleSubmit = e => {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...this.state })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+      e.preventDefault();
+    };
+
+    handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+    render() {
+      const { name, email, message } = this.state;
+      return (
+        <FormBox onSubmit={this.handleSubmit}>
+          <Container>
+          <Heading>
+            <H2 content="Send Us A Message" />
+            <Divider />
+          </Heading>
+            <p>
+                <Input type="text" name="name" value={name} onChange={this.handleChange} placeholder="Your Name" aria-label="Your Name" />
+            </p>
+            <p>
+                <Input type="email" name="email" value={email} onChange={this.handleChange} placeholder="Email Address" aria-label="Email Address" />
+            </p>
+            <p>
+                <Textarea name="message" value={message} onChange={this.handleChange} placeholder="Message" aria-label="Message" />
+            </p>
+            <p>
+                <Button type="submit">Send Message</Button>
+            </p>
+          </Container>
         </FormBox>
-    )
-}
+      );
+    }
+  }
+
+// export default function Form() {
+//     return (
+//         <FormBox onSubmit={handleSubmit} name="contact" netlify>
+//             <Container>
+//                 <Heading>
+//                     <H2 content="Send Us A Message" />
+//                     <Divider />
+//                 </Heading>
+//                 <p>
+//                     <Input type="text" name="name" placeholder="Your Name" aria-label="Your Name" />
+//                 </p>
+//                 <p>
+//                     <Input type="email" name="email" placeholder="Email Address" aria-label="Email Address" />
+//                 </p>
+//                 <p>
+//                     <Input type="text-area" name="message" placeholder="Message" aria-label="Message" />
+//                 </p>
+//                 <p>
+//                     <Button type="submit" aria-label="Submit">Send Message</Button>
+//                 </p>
+//             </Container>
+//         </FormBox>
+//     )
+// }
