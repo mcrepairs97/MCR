@@ -47,11 +47,9 @@ width: max-content;
 cursor: pointer;
 `;
 
-      
-
 export default function Form() {
     return (
-        <FormBox onSubmit={handleSubmit} name="contact" netlify>
+        <FormBox name="contact" method="POST" netlify>
             <input type="hidden" name="form-name" value="contact" />
             <Container>
                 <Heading>
