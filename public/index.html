@@ -35,6 +35,13 @@
     <title>Martin's Computer Repairs & IT Services</title>
   </head>
   <body>
+    <!-- Hidden -->
+      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+
       <div id="fb-root"></div>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="pwBzO4tv"></script>
       <noscript>You need to enable JavaScript to run this app.</noscript>
