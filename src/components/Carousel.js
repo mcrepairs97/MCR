@@ -10,7 +10,15 @@ import { Carousel } from 'react-responsive-carousel';
 
 function Slider() {
     return (
-        <Carousel autoPlay infiniteLoop showThumbs={false} dynamicHeight={false} >
+        <Carousel 
+            autoPlay 
+            infiniteLoop 
+            showThumbs={false} 
+            dynamicHeight={false} 
+            showArrows={false} 
+            showStatus={false} 
+            stopOnHover={true} 
+            >
             <div>
                 <img src={batt1} alt="Laptop Battery" />
             </div>

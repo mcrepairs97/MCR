@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const GridSc = styled.div`
 display: grid;
-grid-auto-flow: ${props => props.width >= 768 ? "column" : "row"};
+grid-auto-flow: ${props => props.width >= 1024 ? "column" : "row"};
 grid-gap: 60px;
 `;
 
