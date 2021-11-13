@@ -59,9 +59,7 @@ function Home() {
     const { width } = useWindowSize();
     return (
         <React.Fragment>
-            
             <BackgroundImage img={brokenLaptop} pos="top" height="80vh">
-                
                 <Container>
                     <Heading>
                         <H1 content="Martin's Computer Repairs &amp; IT Services" />
@@ -128,11 +126,11 @@ function Home() {
                                 We can order you a brand new battery today!
                             </p>
                         </Align>
-                        {width >= 768 && <Carousel />}
+                        {width >= 1024 && <Carousel />}
                     </Grid>
                 </Container>
             </Section>
-            {width <= 767 && <Carousel />}
+            {width <= 1023 && <Carousel />}
         </React.Fragment>
     );
 }

@@ -15,7 +15,11 @@ import { faFileCode, faGlobe, faCertificate, faPen } from '@fortawesome/free-sol
 import Spacer from '../components/Spacer';
 import Product from '../components/Product';
 
+import useWindowSize from '../components/utils/useWindowSize';
+import Animation from '../components/Animation';
+
 function WebDesign() {
+    const { width } = useWindowSize();
     return (
         <React.Fragment>
             <Background img={webDesign}>
@@ -35,12 +39,15 @@ function WebDesign() {
             </Background>
             <Section>
                 <Container>
-                    <Grid>
-                        <Product icon={faFileCode} title="Website Creation" />
-                        <Product icon={faGlobe} title="Domain Registration" />
-                        <Product icon={faCertificate} title="SSL Certification" />
-                        <Product icon={faPen} title="Content Additions" />
-                    </Grid>
+                    <Animation width={width} animation="slider 10000ms linear infinite alternate">
+                        <Grid width={width}>
+                            <Product icon={faFileCode} title="Website Creation" />
+                            <Product icon={faGlobe} title="Domain Registration" />
+                            <Product icon={faCertificate} title="SSL Certification" />
+                            <Product icon={faPen} title="Content Additions" />
+                            <a href="https://freetools.seobility.net/en/seocheck/mcrepairs.co.za"><img src="https://freetools.seobility.net/widget/widget.png?url=mcrepairs.co.za" alt="Seobility Score for mcrepairs.co.za" /></a>
+                        </Grid>
+                    </Animation>
                     <Spacer height="20px" />
                 </Container>
             </Section>
