@@ -6,7 +6,6 @@ import Container from '../components/Container';
 import Heading from '../components/Heading';
 import Divider from '../components/Divider';
 import Section from '../components/Section';
-import Grid from '../components/Grid';
 
 import webDesign from '../assets/images/web-design.png';
 import webDesignBottom from '../assets/images/web-design-bottom.jpg';
@@ -16,10 +15,17 @@ import Spacer from '../components/Spacer';
 import Product from '../components/Product';
 
 import useWindowSize from '../components/utils/useWindowSize';
-import Animation from '../components/Animation';
+import Layout from '../components/Layout';
 
 function WebDesign() {
     const { width } = useWindowSize();
+
+    const attr = {
+        display: "grid",
+        gridTemplateColumns: width >= 768 && "repeat(2, 300px)",
+        justifyContent: width >= 768 && "center",
+        gap: "40px"
+    }
     return (
         <React.Fragment>
             <Background img={webDesign}>
@@ -39,15 +45,13 @@ function WebDesign() {
             </Background>
             <Section>
                 <Container>
-                    <Animation width={width} animation="slider 10000ms linear infinite alternate">
-                        <Grid width={width}>
-                            <Product icon={faFileCode} title="Website Creation" />
-                            <Product icon={faGlobe} title="Domain Registration" />
-                            <Product icon={faCertificate} title="SSL Certification" />
-                            <Product icon={faPen} title="Content Additions" />
-                            <a href="https://freetools.seobility.net/en/seocheck/mcrepairs.co.za"><img src="https://freetools.seobility.net/widget/widget.png?url=mcrepairs.co.za" alt="Seobility Score for mcrepairs.co.za" /></a>
-                        </Grid>
-                    </Animation>
+                    <Layout attr={attr}>
+                        <Product icon={faFileCode} title="Website Creation" />
+                        <Product icon={faGlobe} title="Domain Registration" />
+                        <Product icon={faCertificate} title="SSL Certification" />
+                        <Product icon={faPen} title="Content Additions" />
+                        <a href="https://freetools.seobility.net/en/seocheck/mcrepairs.co.za"><img src="https://freetools.seobility.net/widget/widget.png?url=mcrepairs.co.za" alt="Seobility Score for mcrepairs.co.za" /></a>
+                    </Layout>
                     <Spacer height="20px" />
                 </Container>
             </Section>

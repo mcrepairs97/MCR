@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styled from 'styled-components';
 
 const BackgroundImage = styled.div`
@@ -8,7 +6,6 @@ background-size: cover;
 background-blend-mode: overlay;
 background-repeat: no-repeat;
 background-position: ${props => props.pos || "center"};
-position: ${props => props.fixed && "fixed"};
 display: flex;
 align-items: center;
 justify-content: center;
@@ -19,8 +16,4 @@ padding: 60px 0;
 height: ${props => props.height};
 `;
 
-export default function Background({children, img, pos, height, fixed}) {
-    return (
-        <BackgroundImage img={img} pos={pos} height={height} fixed={fixed}>{children}</BackgroundImage>
-    )
-}
+export default BackgroundImage;

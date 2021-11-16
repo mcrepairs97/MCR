@@ -7,7 +7,6 @@ import Divider from '../components/Divider';
 import Section from '../components/Section';
 import Container from '../components/Container';
 import Spacer from '../components/Spacer';
-import Grid from '../components/Grid';
 import Product from '../components/Product';
 
 import repairServices from '../assets/images/repair-services.jpg';
@@ -16,10 +15,16 @@ import { faKey, faVirusSlash, faLaptopHouse, faEthernet, faDatabase, faAt, faCop
 import { faWindows } from '@fortawesome/free-brands-svg-icons';
 
 import useWindowSize from '../components/utils/useWindowSize';
-import Animation from '../components/Animation';
+import Layout from '../components/Layout';
 
 function RepairServices() {
     const { width } = useWindowSize();
+    const attr = {
+        display: "grid",
+        gridTemplateColumns: width >= 768 && 'repeat(2, 300px)',
+        justifyContent: width >= 768 && 'center',
+        gap: "40px",
+    };
     return (
         <React.Fragment>
             <Background img={repairServices}>
@@ -39,22 +44,20 @@ function RepairServices() {
             </Background>
             <Section>
                 <Container>
-                    <Animation width={width} animation="slider 10000ms linear infinite alternate">
-                        <Grid width={width}>
-                            <Product icon={faKey} title="Password Removal" price="R150" />
-                            <Product icon={faCut} title="Stripping" price="R150" />
-                            <Product icon={faCopy} title="Cloning" price="R150" />
-                            <Product icon={faVirusSlash} title="Virus Removal" price="R200" />
-                            <Product icon={faLaptopHouse} title="Remote Assistance" price="R200" />
-                            <Product icon={faDatabase} title="Data backup &amp; Restore" price="R200" />
-                            <Product icon={faEthernet} title="Router Configuration" price="R200" />
-                            <Product icon={faAt} title="Email Configuration" price="R200" />
-                            <Product icon={faNetworkWired} title="Networking" price="R200" />
-                            <Product icon={faDownload} title="Downloading of Programs" price="R200" />
-                            <Product icon={faWindows} title="Windows Repair" price="R250" />
-                            <Product icon={faWindowRestore} title="Reinstall Windows" price="R300" />
-                        </Grid>
-                    </Animation>
+                    <Layout attr={attr}>
+                        <Product icon={faKey} title="Password Removal" price="R150" />
+                        <Product icon={faCut} title="Stripping" price="R150" />
+                        <Product icon={faCopy} title="Cloning" price="R150" />
+                        <Product icon={faVirusSlash} title="Virus Removal" price="R200" />
+                        <Product icon={faLaptopHouse} title="Remote Assistance" price="R200" />
+                        <Product icon={faDatabase} title="Data backup &amp; Restore" price="R200" />
+                        <Product icon={faEthernet} title="Router Configuration" price="R200" />
+                        <Product icon={faAt} title="Email Configuration" price="R200" />
+                        <Product icon={faNetworkWired} title="Networking" price="R200" />
+                        <Product icon={faDownload} title="Downloading of Programs" price="R200" />
+                        <Product icon={faWindows} title="Windows Repair" price="R250" />
+                        <Product icon={faWindowRestore} title="Reinstall Windows" price="R300" />
+                    </Layout>
                 </Container>
             </Section>
         </React.Fragment>

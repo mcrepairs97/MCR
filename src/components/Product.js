@@ -5,6 +5,8 @@ import H5 from './H5';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import useWindowSize from '../components/utils/useWindowSize';
+
 const Card = styled.figure`
 display: flex;
 flex-direction: column;
@@ -14,7 +16,6 @@ background-color: #fff;
 border-radius: 12px;
 box-shadow: 5px 5px 20px #cccccc;
 padding: 20px;
-width: 100%;
 
 & h5 {
     margin: 20px 0;
@@ -27,8 +28,9 @@ font-weight: bold;
 `;
 
 export default function Product(props) {
+    const { width } = useWindowSize();
     return (
-        <Card>
+        <Card width={width}>
             <FontAwesomeIcon icon={props.icon} />
             <H5 fg={props.fg}>{props.title}</H5>
             <Price>{props.price}</Price>

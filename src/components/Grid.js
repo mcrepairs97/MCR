@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import styled from 'styled-components';
 
@@ -8,8 +8,8 @@ grid-auto-flow: ${props => props.width >= 1024 ? "column" : "row"};
 grid-gap: 60px;
 `;
 
-export default function Grid({children, width}) {
+export default function Grid({children, width, autoFill}) {
     return (
-        <GridSc width={width}>{children}</GridSc>
+        <GridSc width={width} autoFill>{children}</GridSc>
     )
 }
