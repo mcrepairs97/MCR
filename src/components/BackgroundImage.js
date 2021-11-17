@@ -6,6 +6,7 @@ background-size: cover;
 background-blend-mode: overlay;
 background-repeat: no-repeat;
 background-position: ${props => props.pos || "center"};
+background-attachment: ${props => props.fixed && "fixed"};
 display: flex;
 align-items: center;
 justify-content: center;

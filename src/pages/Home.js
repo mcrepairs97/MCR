@@ -22,7 +22,6 @@ import Section from '../components/Section';
 import Container from '../components/Container';
 import Grid from '../components/Grid';
 import BackgroundImage from '../components/BackgroundImage';
-import ParallaxBackground from '../components/ParallaxBackground';
 
 const Figure = styled.figure`
 display: flex;
@@ -60,7 +59,7 @@ function Home() {
     const { width } = useWindowSize();
     return (
         <React.Fragment>
-            <ParallaxBackground img={brokenLaptop}>
+            <BackgroundImage img={brokenLaptop} bgPos="top" fixed height="80vh">
                 <div className="image"></div>
                 <Container>
                     <Heading>
@@ -74,7 +73,7 @@ function Home() {
                     <Spacer height="20" />
                     <Button to="/contact" content="Book A Service" />
                 </Container>
-            </ParallaxBackground>
+            </BackgroundImage>
             <Section>
                 <Container>
                     <Heading>
@@ -101,7 +100,8 @@ function Home() {
             </Section>
             
             <Section>
-                <BackgroundImage img={motherboard}>
+            <BackgroundImage img={motherboard} bgPos="top" fixed height="80vh">
+                <div class="image"></div>
                     <Container>
                         <Heading>
                             <H2 content="Find What You Need" />
