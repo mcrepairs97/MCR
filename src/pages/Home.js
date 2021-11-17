@@ -63,7 +63,10 @@ function Home() {
                 <div className="image"></div>
                 <Container>
                     <Heading>
-                        <H1 content="Martin's Computer Repairs &amp; IT Services" />
+                        <H1>
+                            Martin's Computer Repairs <br />
+                            &amp; IT Services
+                        </H1>
                         <Divider />
                     </Heading>
                     <H3 content="Need some help upgrading your software?" />

@@ -29,11 +29,13 @@ const IconHeader = styled.div`
 function AboutUs() {
     return (
         <React.Fragment>
-            <Background img={aboutUs}>
+            <Background img={aboutUs} bgPos="top" fixed>
                 <Spacer height="60" />
                 <Container>
                     <Heading>
-                        <H1 content="About Us" />
+                        <H1>
+                            About Us
+                        </H1>
                         <Divider />
                     </Heading>
                     <p className="text-center">
@@ -71,7 +73,7 @@ function AboutUs() {
                     </Grid>
                 </Container>
             </Section>
-            <Background img={lookingForMore}><Spacer height="200" /></Background>
+            <Background img={lookingForMore} height="30vh" />
             <Section>
                 <Container>
                     <Grid>

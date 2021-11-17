@@ -27,11 +27,13 @@ function RepairServices() {
     };
     return (
         <React.Fragment>
-            <Background img={repairServices}>
+            <Background img={repairServices} bgPos="top" fixed>
                 <Spacer height="60" />
                 <Container>
                     <Heading>
-                        <H1 content="Repair Services" />
+                        <H1>
+                            Repair Services
+                        </H1>
                         <Divider />
                     </Heading>
                     <p className="text-center">
