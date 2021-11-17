@@ -40,6 +40,7 @@ justify-content: center;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     width: 100%;
+    height: 200px;
     text-align: center;
 }
 `;
