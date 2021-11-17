@@ -18,11 +18,13 @@ import contact from '../assets/images/contact.jpg';
 function Contact() {
     return (
         <React.Fragment>
-            <Background img={contact}>
+            <Background img={contact} bgPos="top" fixed>
                 <Spacer height="60" />
                 <Container>
                     <Heading>
-                        <H1 content="Contact" />
+                        <H1>
+                            Contact
+                        </H1>
                         <Divider />
                     </Heading>
                     <p className="text-center">

@@ -28,11 +28,13 @@ function WebDesign() {
     }
     return (
         <React.Fragment>
-            <Background img={webDesign}>
+            <Background img={webDesign} bgPos="top" fixed>
                 <Spacer height="60" />
                 <Container>
                     <Heading>
-                        <H1 content="Web Development &amp; Design" />
+                        <H1>
+                            Web Development &amp; Design
+                        </H1>
                         <Divider />
                     </Heading>
                     <p className="text-center">

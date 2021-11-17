@@ -6,10 +6,10 @@ const Heading = styled.h1`
 color: ${props => props.theme.accent};
 `;
 
-function H1(props) {
+function H1({children}) {
     return (
         <Heading>
-            {props.content}
+            {children}
         </Heading>
     );
 }
