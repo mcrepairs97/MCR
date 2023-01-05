@@ -11,7 +11,7 @@ import Product from '../components/Product';
 
 import repairServices from '../assets/images/repair-services.jpg';
 
-import { faKey, faVirusSlash, faLaptopHouse, faEthernet, faDatabase, faAt, faCopy, faWindowRestore, faNetworkWired, faCut, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faKey, faVirusSlash, faLaptopHouse, faEthernet, faDatabase, faAt, faCopy, faWindowRestore, faNetworkWired, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { faWindows } from '@fortawesome/free-brands-svg-icons';
 
 import useWindowSize from '../components/utils/useWindowSize';
