@@ -20,6 +20,10 @@ padding: 20px;
 & h5 {
     margin: 20px 0;
 }
+
+&:first-child {
+    grid-column: 1/3;
+}
 `;
 
 const Price = styled.span`

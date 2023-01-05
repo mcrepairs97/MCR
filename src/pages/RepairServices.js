@@ -39,7 +39,10 @@ function RepairServices() {
                     <p className="text-center">
                         Here you wll find a list of our repair services with their prices.
                         <br />
-                        Any service done will include a labour fee of R150.
+                        Any service done will include a labour fee of R200.
+                    </p>
+                    <p className="text-center">
+                        Jobs outside of local area will include a callout fee of R250.
                     </p>
                 </Container>
                 <Spacer height="60" />
@@ -48,17 +51,17 @@ function RepairServices() {
                 <Container>
                     <Layout attr={attr}>
                         <Product icon={faKey} title="Password Removal" price="R150" />
-                        <Product icon={faCut} title="Stripping" price="R150" />
+                        {/* <Product icon={faCut} title="Stripping" price="R150" /> */}
                         <Product icon={faCopy} title="Cloning" price="R150" />
                         <Product icon={faVirusSlash} title="Virus Removal" price="R200" />
                         <Product icon={faLaptopHouse} title="Remote Assistance" price="R200" />
-                        <Product icon={faDatabase} title="Data backup &amp; Restore" price="R200" />
+                        <Product icon={faDatabase} title="Data backup &amp; Restore" price="R250" />
                         <Product icon={faEthernet} title="Router Configuration" price="R200" />
                         <Product icon={faAt} title="Email Configuration" price="R200" />
                         <Product icon={faNetworkWired} title="Networking" price="R200" />
                         <Product icon={faDownload} title="Downloading of Programs" price="R200" />
                         <Product icon={faWindows} title="Windows Repair" price="R250" />
-                        <Product icon={faWindowRestore} title="Reinstall Windows" price="R300" />
+                        <Product icon={faWindowRestore} title="Reinstall Windows" price="R350" />
                     </Layout>
                 </Container>
             </Section>
